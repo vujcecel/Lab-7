@@ -23,8 +23,8 @@ class Counter implements ActionListener {
 
     leftCount = 0;
     rightCount = 0;
-    leftLabel = new JLabel("Count " + leftCount);
-    rightLabel = new JLabel("Count " + rightCount);
+    leftLabel = new JLabel("Count: " + leftCount);
+    rightLabel = new JLabel("Count: " + rightCount);
     frame.add(leftLabel);
     frame.add(rightLabel);
 
@@ -38,17 +38,17 @@ class Counter implements ActionListener {
   public void actionPerformed(ActionEvent ae) {
     if (ae.getActionCommand().equals("Left")) {
       leftCount++;
-      leftLabel.setText("Count " + leftCount);
+      leftLabel.setText("Count: " + leftCount);
     }
     else if (ae.getActionCommand().equals("Right")) {
       rightCount++;
-      rightLabel.setText("Count " + rightCount);
+      rightLabel.setText("Count: " + rightCount);
     }
     else {
       leftCount = 0;
       rightCount = 0;
-      leftLabel.setText("Count " + leftCount);
-      rightLabel.setText("Count " + rightCount);
+      leftLabel.setText("Count: " + leftCount);
+      rightLabel.setText("Count: " + rightCount);
     }
   }
 }
